@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="banner align">
+        <div class="game-mode">
+            <h3>Select Mode</h3>
+            <div class="options">
+                <button id="pvp">Player Vs Player</button>
+                <button id="pvc">Player Vs Computer</button>
+            </div>
+        </div>
+
+
+        <div class="game">
+            <h3 id="mode"></h3>
+            <div class="settings">
+                <h3>Choose your difficuly</h3>
+                <div class="level">
+                    <input type="radio" name="difficulty" value="Easy" class="difficulty" checked>
+                    <label>Easy</label>
+                    <input type="radio" name="difficulty" value="Hard" class="difficulty">
+                    <label>Hard</label>
+                </div>
+            </div>
+
+            <div class="turn-container">
+                <h3>Turn For</h3>
+                <div class="turn">
+                    <div class="turn-box align">X</div>
+                    <div class="turn-box align">O</div>
+                    <div class="bg"></div>
+                </div>
+            </div>
+
+            <div class="game-board">
+                <div class="cell align">0</div>
+                <div class="cell align">1</div>
+                <div class="cell align">2</div>
+                <div class="cell align">3</div>
+                <div class="cell align">4</div>
+                <div class="cell align">5</div>
+                <div class="cell align">6</div>
+                <div class="cell align">7</div>
+                <div class="cell align">8</div>
+            </div>
+
+            <h2 id="results"></h2>
+            <button id="play-again">Play again</button>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
