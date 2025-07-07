@@ -17,17 +17,25 @@
         </div>
 
 
+        <div class="settings">
+            <h3>Choose your difficulty</h3>
+            <div class="level align">
+                <select name="difficulty" class="difficulty">
+                    <option value="Choose">Choose</option>
+                    <option value="Easy">Easy</option>
+                    <option value="Hard">Hard</option>
+                </select>
+            </div>
+
+            <div class="play align">
+                <button id="playPvc">Play Game!</button>
+            </div>
+
+        </div>
+
+
         <div class="game">
             <h3 id="mode"></h3>
-            <div class="settings">
-                <h3>Choose your difficuly</h3>
-                <div class="level">
-                    <input type="radio" name="difficulty" value="Easy" class="difficulty" checked>
-                    <label>Easy</label>
-                    <input type="radio" name="difficulty" value="Hard" class="difficulty">
-                    <label>Hard</label>
-                </div>
-            </div>
 
             <div class="turn-container">
                 <h3>Turn For</h3>
@@ -50,7 +58,7 @@
                 <div class="cell align">8</div>
             </div>
 
-            <h2 id="results"></h2>
+            <!--<h2 id="message"></h2>-->
             <button id="play-again">Play again</button>
         </div>
 

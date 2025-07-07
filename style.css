@@ -78,24 +78,60 @@
 }
 
 .settings{
+    width: 300px;
+    background-color: #2e3440;
+    color: #eceff4;
+    border: 3px solid #3b4252;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     display: none;
-    margin-bottom: 50px;
-   /* display: flex;*/
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .settings h3{
     text-align: center;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.settings .level .difficulty{
+
+    background-color: #2e3440;
+    color: #eceff4;
+    border: 2px solid #3b4252;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    outline: none;
+
+}
+
+.settings .level .difficulty:hover{
+    border: 2px solid #8da5de;
+}
+
+.settings .level .difficulty option{
+    padding: 10px 15px;
 }
 
 .level{
-    margin-top: 15px;
+    margin-bottom: 20px;
 }
 
-.level label{
-    margin-right: 30px;
+.settings .play button{
+    margin-bottom: 30px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #88c0d0;
+    
+}
+
+.settings .play button:hover{
+    background-color: #81a1c1;
 }
 
 .turn-container{
