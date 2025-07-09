@@ -10,6 +10,8 @@ const playAgain = document.querySelector('#play-again');
 const bg = document.querySelector('.bg');
 const settingOption = document.querySelector('.difficulty');
 const pvcPlay = document.querySelector('#playPvc');
+const backgroudgMusic = document.querySelector('#bgm');
+const returnHome = document.querySelector('#return-home');
 
 
 let gameMode = '';
@@ -31,6 +33,7 @@ pvcPlay.addEventListener('click', () =>{
     if(gameDifficulty !== 'Choose' && settingOption.value !== 'Choose'){
         settings.style.display = 'none';
         game.style.display = 'flex';
+        backgroudgMusic.play();
     }
 
     else{
@@ -45,9 +48,11 @@ function loadGame(selectedMode){
     chooseModeBox.style.display = 'none';
     if(gameMode !== 'pvc'){
         game.style.display = 'flex';
+        backgroudgMusic.play();
     }
     else{
         settings.style.display = 'block';
+
     }
     
 
@@ -232,6 +237,10 @@ function computerMove(){
 }
 
 playAgain.addEventListener('click', ()=>{
+    resetGame();
+});
+
+function resetGame(){
     isGameOver = false;
     currentplayer = 'X';
     cells.forEach((cell)=>{
@@ -240,6 +249,14 @@ playAgain.addEventListener('click', ()=>{
     
     playAgain.style.display = 'none';
     bg.style.left ='0';
-})
+}
+
+returnHome.addEventListener('click', () => {
+    resetGame();
+    game.style.display = 'none';
+    chooseModeBox.style.display = 'block';
+    backgroudgMusic.pause();
+    backgroudgMusic.currentTime = 0;
+});
 
 

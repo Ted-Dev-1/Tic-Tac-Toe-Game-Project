@@ -201,3 +201,14 @@
     font-size: 1.6rem;
     display: none;
 }
+
+#return-home{
+    margin-top: 20px;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4b77cd;
+    /*font-weight: 700;*/
+    font-size: 1.6rem;
+}
