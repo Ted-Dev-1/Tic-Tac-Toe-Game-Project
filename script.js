@@ -13,6 +13,10 @@ const pvcPlay = document.querySelector('#playPvc');
 const backgroudgMusic = document.querySelector('#bgm');
 const returnHome = document.querySelector('#return-home');
 
+const modal = document.getElementById("modal");
+const okBtn = document.getElementById("okClose");
+const result = document.querySelector('#result');
+
 
 let gameMode = '';
 let gameDifficulty ='';
@@ -37,7 +41,9 @@ pvcPlay.addEventListener('click', () =>{
     }
 
     else{
-        alert('pick a game difficulty');
+        //alert('pick a game difficulty');
+        result.innerHTML = 'Pick a game difficulty';
+        modal.style.display = 'flex';
     }
 });
 
@@ -55,7 +61,6 @@ function loadGame(selectedMode){
 
     }
     
-
     cells.forEach(function (cell){
         cell.innerHTML = '';
         
@@ -102,7 +107,15 @@ function checkWin(){
 
         if(box1 !== '' && box1 === box2 && box1 === box3){
             isGameOver = true;
-            alert(`Player ${currentplayer} wins`);
+            //alert(`Player ${currentplayer} wins`);
+            if(gameMode === 'pvc' && currentplayer === 'O'){
+                result.innerHTML = `Computer wins`;
+            }
+            else{
+                result.innerHTML = `Player ${currentplayer} wins`;
+            }
+
+            modal.style.display = 'flex';
             playAgain.style.display = 'inline';
         }
     }
@@ -119,7 +132,9 @@ function checkDraw(){
 
         if(isDraw){
             isGameOver = true;
-            alert('Draw');
+            //alert('Draw');
+            result.innerHTML = `Draw`;
+            modal.style.display = 'flex';
             playAgain.style.display = 'inline';
         }
     }
@@ -257,6 +272,21 @@ returnHome.addEventListener('click', () => {
     chooseModeBox.style.display = 'block';
     backgroudgMusic.pause();
     backgroudgMusic.currentTime = 0;
+});
+
+
+
+
+
+okBtn.addEventListener("click", function(){
+    modal.style.display = "none";
+});
+
+
+modal.addEventListener("click", function(e){
+    if(e.target === modal){
+        e.target.style.display = "none";
+    }
 });
 
 
